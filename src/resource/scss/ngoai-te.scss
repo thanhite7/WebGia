@@ -1,0 +1,25 @@
+body {
+    font-size: 1rem;
+    color: #222;
+}
+a {
+    color: #005cef;
+    text-decoration: none;
+}
+.source {
+    text-align: right;
+    font-size: 0.875rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+h1, h2, h3 {
+    color: #061890;
+}
+.h3, h3 {
+    font-size: calc(1.3rem + .6vw);
+}
+#tom_tat_ty_gia p{
+    display: flex;
+    flex-direction: row;
+}
