@@ -49,8 +49,8 @@
           </ul>
         </li>
         <li class="nav-item dropdown" style = "height:50px; border:none;">
-          <a class="nav-link dropdown-toggle" href="http://localhost:3000/ty-gia-ngan-hang"   style = "color: #fff ;font-size: 16px;
-    margin: 0; padding:13px 12px; "  id="title-tygianganhang">
+          <a class="nav-link dropdown-toggle" href="http://localhost:3000/ty-gia"   style = "color: #fff ;font-size: 16px;
+    margin: 0; padding:13px 12px; "  id="title-tygia">
             Tỷ giá ngân hàng
           </a>
           <ul class="dropdown-menu" style = 'padding:0px;border-radius:0px;  width:auto;'>
@@ -329,7 +329,7 @@
 
 
 
-  <div class="sub-nav" itemscope="" itemtype="http://schema.org/SiteNavigationElement" id="tygianganhang">
+  <div class="sub-nav" itemscope="" itemtype="http://schema.org/SiteNavigationElement" id="tygia">
     <div class="container" >
         <ul class="nav">
           <li><a href="http://localhost:3000/ty-gia/abbank/" itemprop="url" title="TMCP An Bình"><span itemprop="name">ABBank</span></a></li>
@@ -497,7 +497,7 @@
           document.addEventListener("DOMContentLoaded", function() {
 
           var currentUrl = window.location.href;
-          var linkarray  = ["gia-vang" ,"ty-gia-ngan-hang" ,"ngoai-te" ,"lai-suat" ,"tien-ao" ,"xang-dau" ,"hang-hoa"]
+          var linkarray  = ["gia-vang" ,"ty-gia" ,"ngoai-te" ,"lai-suat" ,"tien-ao" ,"xang-dau" ,"hang-hoa"]
           for ( var ele of linkarray){
               if(currentUrl.includes(ele) ){
                   document.getElementById(ele.split('-').join('')).style.display = "block";

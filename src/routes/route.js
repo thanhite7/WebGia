@@ -13,7 +13,7 @@ function routes(app){
     app.use("/lai-suat",laisuat);
     app.use("/ngoai-te",ngoaite);
     app.use("/tien-ao",tienao);
-    app.use("/ty-gia-ngan-hang",tygianganhang);
+    app.use("/ty-gia",tygianganhang);
     app.use("/xang-dau",xangdau);
 }
 module.exports = routes;
