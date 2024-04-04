@@ -17,13 +17,13 @@ const getbidv = (req, res) => {
     res.render('ty-gia-ngan-hang/bidv', {title: 'Ti gia'})
 }
 const getbaovietbank = (req, res) => {
-    res.render('ty-gia-ngan-hang/baovietbank', {title: 'Ti gia'})
+    res.render('ty-gia-ngan-hang/baoviet', {title: 'Ti gia'})
 }
 const getcbbank = (req, res) => {
     res.render('ty-gia-ngan-hang/cbbank', {title: 'Ti gia'})
 }
 const getdongabank = (req, res) => {
-    res.render('ty-gia-ngan-hang/dongabank', {title: 'Ti gia'})
+    res.render('ty-gia-ngan-hang/donga', {title: 'Ti gia'})
 }
 const geteximbank = (req, res) => {
     res.render('ty-gia-ngan-hang/eximbank', {title: 'Ti gia'})
@@ -38,25 +38,25 @@ const gethsbc = (req, res) => {
     res.render('ty-gia-ngan-hang/hsbc', {title: 'Ti gia'})
 }
 const gethongleongbank = (req, res) => {
-    res.render('ty-gia-ngan-hang/hlbank', {title: 'Ti gia'})
+    res.render('ty-gia-ngan-hang/hongleong', {title: 'Ti gia'})
 }
 const getindovinabank = (req, res) => {
-    res.render('ty-gia-ngan-hang/indovinabank', {title: 'Ti gia'})
+    res.render('ty-gia-ngan-hang/indovina', {title: 'Ti gia'})
 }
 const getkienlongbank = (req, res) => {
-    res.render('ty-gia-ngan-hang/kienlongbank', {title: 'Ti gia'})
+    res.render('ty-gia-ngan-hang/kienlong', {title: 'Ti gia'})
 }
 const getlienvietpostbank = (req, res) => {
-    res.render('ty-gia-ngan-hang/lienvietpostbank', {title: 'Ti gia'})
+    res.render('ty-gia-ngan-hang/lienviet', {title: 'Ti gia'})
 }
 const getmbbank = (req, res) => {
-    res.render('ty-gia-ngan-hang/mbbank', {title: 'Ti gia'})
+    res.render('ty-gia-ngan-hang/mb', {title: 'Ti gia'})
 }
 const getmaritimebank = (req, res) => {
-    res.render('ty-gia-ngan-hang/maritimebank', {title: 'Ti gia'})
+    res.render('ty-gia-ngan-hang/msb', {title: 'Ti gia'})
 }
 const getnamabank = (req, res) => {
-    res.render('ty-gia-ngan-hang/namabank', {title: 'Ti gia'})
+    res.render('ty-gia-ngan-hang/nama', {title: 'Ti gia'})
 }
 const getocb = (req, res) => {
     res.render('ty-gia-ngan-hang/ocb', {title: 'Ti gia'})
@@ -95,7 +95,7 @@ const gettechcombank = (req, res) => {
     res.render('ty-gia-ngan-hang/techcombank', {title: 'Ti gia'})
 }
 const gettpbank = (req, res) => {
-    res.render('ty-gia-ngan-hang/tpbank', {title: 'Ti gia'})
+    res.render('ty-gia-ngan-hang/tpb', {title: 'Ti gia'})
 }
 const getvib = (req, res) => {
     res.render('ty-gia-ngan-hang/vib', {title: 'Ti gia'})
@@ -110,7 +110,7 @@ const getvietcombank = (req, res) => {
     res.render('ty-gia-ngan-hang/vietcombank', {title: 'Ti gia'})
 }
 const getvietinbank = (req, res) => {
-    res.render('ty-gia-ngan-hang/vietinbank', {title: 'Ti gia'})
+    res.render('ty-gia-ngan-hang/viettinbank', {title: 'Ti gia'})
 }
 const getvietbank = (req, res) => {
     res.render('ty-gia-ngan-hang/vietbank', {title: 'Ti gia'})
@@ -120,7 +120,7 @@ const getvpbank = (req, res) => {
     res.render('ty-gia-ngan-hang/vpbank', {title: 'Ti gia'})
 }
 const getvrbank = (req, res) => {
-    res.render('ty-gia-ngan-hang/vrbank', {title: 'Ti gia'})
+    res.render('ty-gia-ngan-hang/vrb', {title: 'Ti gia'})
 }
 
 
