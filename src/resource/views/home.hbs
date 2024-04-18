@@ -1,4 +1,7 @@
-<link rel="stylesheet" href="css/home.css">
+<meta charset="UTF-8">
+
+<link rel="stylesheet" href="../../public/css/app.css">
+
 <main >
     <div class="container"> 
         <div class = "row">
@@ -17,167 +20,25 @@
                             <th class="text-right">Bán ra</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-    <th rowspan="5">TP.Hồ Chí Minh</th>
-    <td><a href="https://webgia.com/gia-vang/sjc/" title="Giá vàng SJC"><strong>SJC</strong></a></td>
-    <td class="text-right">7.830.000</td>
-    <td class="text-right">8.080.000</td>
-</tr>
-<tr>
-    <td><a href="https://webgia.com/gia-vang/pnj/" title="Giá vàng PNJ"><strong>PNJ</strong></a></td>
-    <td class="text-right">7.820.000</td>
-    <td class="text-right">8.060.000</td>
-</tr>
-<tr>
-    <td><a href="https://webgia.com/gia-vang/doji/" title="Giá vàng DOJI"><strong>DOJI</strong></a></td>
-    <td class="text-right">7.880.000</td>
-    <td class="text-right">8.080.000</td>
-</tr>
-<tr>
-    <td><a href="https://webgia.com/gia-vang/mi-hong/" title="Giá vàng Mi Hồng"><strong>Mi Hồng</strong></a></td>
-    <td class="text-right text-green">7.910.000</td>
-    <td class="text-right text-green">8.030.000</td>
-</tr>
-<tr>
-    <td><a href="https://webgia.com/gia-vang/ngoc-tham/" title="Giá vàng Ngọc Thẩm"><strong>Ngọc Thẩm</strong></a></td>
-    <td class="text-right">7.860.000</td>
-    <td class="text-right">8.040.000</td>
-</tr>
-<tr>
-    <th rowspan="6">Hà Nội</th>
-    <td><a href="https://webgia.com/gia-vang/sjc/" title="Giá vàng SJC"><strong>SJC</strong></a></td>
-    <td class="text-right">7.830.000</td>
-    <td class="text-right">8.082.000</td>
-</tr>
-<tr>
-    <td><a href="https://webgia.com/gia-vang/pnj/" title="Giá vàng PNJ"><strong>PNJ</strong></a></td>
-    <td class="text-right">7.820.000</td>
-    <td class="text-right text-green">8.060.000</td>
-</tr>
-<tr>
-    <td><a href="https://webgia.com/gia-vang/doji/" title="Giá vàng DOJI"><strong>DOJI</strong></a></td>
-    <td class="text-right">7.880.000</td>
-    <td class="text-right">8.080.000</td>
-</tr>
-<tr>
-    <td><a href="https://webgia.com/gia-vang/bao-tin-minh-chau/" title="Giá vàng Bảo Tín Minh Châu"><strong>Bảo Tín Minh Châu</strong></a></td>
-    <td class="text-right text-green">7.890.000</td>
-    <td class="text-right">8.080.000</td>
-</tr>
-<tr>
-    <td><a href="https://webgia.com/gia-vang/bao-tin-manh-hai/" title="Giá vàng Bảo Tín Mạnh Hải"><strong>Bảo Tín Mạnh Hải</strong></a></td>
-    <td class="text-right text-green">7.890.000</td>
-    <td class="text-right">8.100.000</td>
-</tr>
-<tr>
-    <td><a href="https://webgia.com/gia-vang/phu-quy/" title="Giá vàng Phú Quý"><strong>Phú Quý</strong></a></td>
-    <td class="text-right">7.840.000</td>
-    <td class="text-right">8.070.000</td>
-</tr>
-<tr>
-    <th rowspan="3">Đà Nẵng</th>
-    <td><a href="https://webgia.com/gia-vang/sjc/" title="Giá vàng SJC"><strong>SJC</strong></a></td>
-    <td class="text-right">7.830.000</td>
-    <td class="text-right">8.082.000</td>
-</tr>
-<tr>
-    <td><a href="https://webgia.com/gia-vang/pnj/" title="Giá vàng PNJ"><strong>PNJ</strong></a></td>
-    <td class="text-right">7.820.000</td>
-    <td class="text-right text-green">8.060.000</td>
-</tr>
-<tr>
-    <td><a href="https://webgia.com/gia-vang/doji/" title="Giá vàng DOJI"><strong>DOJI</strong></a></td>
-    <td class="text-right text-green">7.880.000</td>
-    <td class="text-right">8.080.000</td>
-</tr>
-<tr>
-    <td colspan="4">
-        <!-- webgia - responsive n2 -->
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-2859260740125600"
-             data-ad-slot="3760002134"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-        <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-    </td>
-</tr>
-<tr>
-    <th rowspan="1">Nha Trang</th>
-    <td><a href="https://webgia.com/gia-vang/sjc/" title="Giá vàng SJC"><strong>SJC</strong></a></td>
-    <td class="text-right">7.830.000</td>
-    <td class="text-right">8.082.000</td>
-</tr>
+                        <tbody id="bang-gia">
+                            {{#each giavang}}
+                                
+                                    <tr>
+                                        <th rowspan='1'>{{khu_vuc}}</th>
+                                        <td><a href="#" title="Giá vàng {{he_thong}}"><strong>{{he_thong}}</strong></a></td>
+                                        <td class="text-right text-green">{{mua_vao}}</td>
+                                        <td class="text-right text-green">{{ban_ra}}</td>
+                                    </tr>
 
-<tr>
-    <th rowspan="1">Cà Mau</th>
-    <td><a href="https://webgia.com/gia-vang/sjc/" title="Giá vàng SJC"><strong>SJC</strong></a></td>
-    <td class="text-right">7.830.000</td>
-    <td class="text-right">8.082.000</td>
-</tr>
-
-<tr>
-    <th rowspan="1">Huế</th>
-    <td><a href="https://webgia.com/gia-vang/sjc/" title="Giá vàng SJC"><strong>SJC</strong></a></td>
-    <td class="text-right">7.827.000</td>
-    <td class="text-right">8.082.000</td>
-</tr>
-<tr>
-    <th rowspan="1">Biên Hòa</th>
-    <td><a href="https://webgia.com/gia-vang/sjc/" title="Giá vàng SJC"><strong>SJC</strong></a></td>
-    <td class="text-right">7.830.000</td>
-    <td class="text-right">8.080.000</td>
-</tr>
-<tr>
-    <th rowspan="2">Miền Tây</th>
-    <td><a href="https://webgia.com/gia-vang/sjc/" title="Giá vàng SJC"><strong>SJC</strong></a></td>
-    <td class="text-right">7.830.000</td>
-    <td class="text-right">8.080.000</td>
-</tr>
-<tr>
-    <td><a href="https://webgia.com/gia-vang/ngoc-tham/" title="Giá vàng Ngọc Thẩm"><strong>Ngọc Thẩm</strong></a></td>
-    <td class="text-right text-green">7.860.000</td>
-    <td class="text-right text-green">8.040.000</td>
-</tr>
-<tr>
-    <th rowspan="1">Quãng Ngãi</th>
-    <td><a href="https://webgia.com/gia-vang/sjc/" title="Giá vàng SJC"><strong>SJC</strong></a></td>
-    <td class="text-right">7.830.000</td>
-    <td class="text-right">8.080.000</td>
-</tr>
-<tr>
-    <th rowspan="1">Bạc Liêu</th>
-    <td><a href="https://webgia.com/gia-vang/sjc/" title="Giá vàng SJC"><strong>SJC</strong></a></td>
-    <td class="text-right">7.830.000</td>
-    <td class="text-right">8.082.000</td>
-</tr>
-<tr>
-    <th rowspan="1">Hạ Long</th>
-    <td><a href="https://webgia.com/gia-vang/sjc/" title="Giá vàng SJC"><strong>SJC</strong></a></td>
-    <td class="text-right">7.828.000</td>
-    <td class="text-right">8.082.000</td>
-</tr>
-<tr>
-    <th rowspan="2">Đông Nam Bộ</th>
-    <td><a href="https://webgia.com/gia-vang/pnj/" title="Giá vàng PNJ"><strong>PNJ</strong></a></td>
-    <td class="text-right">7.820.000</td>
-    <td class="text-right">8.060.000</td>
-</tr>
-<tr>
-    <td><a href="https://webgia.com/gia-vang/ngoc-tham/" title="Giá vàng Ngọc Thẩm"><strong>Ngọc Thẩm</strong></a></td>
-    <td class="text-right text-green">7.860.000</td>
-    <td class="text-right text-green">8.040.000</td>
-</tr>
-
-                    </tbody>
+                            {{/each}}
+                        </tbody>
                 </table>
 
-
-
-            </div>
-            {{>aside-table}}
     </div>
+    {{>aside-table}}
+    </div>
+    <script>
+
+        
+    </script>
 </main>

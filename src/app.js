@@ -1,29 +1,72 @@
 const express = require('express');
-const connectDB = require('./config/database/db');
+const client = require('./config/database/db');
 const app = express();
 const path = require('path');
+const fs = require('fs');
+const csv = require('csv-parser');
+
 const {engine} = require('express-handlebars');
 require("dotenv").config();
 const routes = require('./routes/route');
 const PORT = 3000 ;
-const MONGO_URI = "mongodb+srv://thanhnguyentienusd:thanh20102003@cluster0.9e6vfas.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+
+
+const listfile = ['giavang','tygianganhang','giaxangdau','ngoaite','giadauthothegioi','giavangthegioi','giacaphe']
 app.engine('hbs', engine({
     extname: 'hbs',
 }));
-app.set('view engine', 'hbs');
 
+app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname+'/resource/views'));
-app.use(express.static(path.join(__dirname, '/public')));   
+app.use(express.static(path.join(__dirname, '/public/')));       
 
 routes(app);
 
-const start = async ()=>{
-    try{
-        await connectDB(MONGO_URI);
-        app.listen(PORT,()=>{
+async function updateDataToMongoDB() {
+    try {
+        await client.connect();
+        console.log('Connected to MongoDB');
+        const db = client.db('webgia');
+        listfile.forEach(async (file) => {
+            const collection = db.collection(file);
+            const newData = [];
+            fs.createReadStream(file+'.csv')
+                .pipe(csv())
+                .on('data', (row) => {
+                    newData.push(row);
+                })
+                .on('end', async () => {
+
+                    const currentData = await collection.find({}).toArray();
+                    const newDataJson = JSON.stringify(newData);
+                    const currentDataJson = JSON.stringify(currentData);
+                    if (newDataJson !== currentDataJson) {
+
+                        await collection.deleteMany({});
+                        console.log('Old data has been deleted');
+                        await collection.insertMany(newData);
+                        console.log('New data has been inserted into MongoDB');
+                    } else {
+                        console.log('No changes detected. Data in MongoDB is up to date.');
+                    }
+                });
+        });
+    } catch (error) {
+        console.error('Error:', error);
+    }
+}
+
+
+const start = async () => {
+    try {
+        setInterval(async () => {
+            await updateDataToMongoDB();
+        }, 900000);
+  
+        app.listen(PORT, () => {
             console.log(`Server is running on port ${PORT}`);
-        })
-    }catch(error){
+        });
+    } catch (error) {
         console.log(error);
     }
 }

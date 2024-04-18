@@ -21,18 +21,14 @@
 </tr>
 </thead>
 <tbody>
-<tr>
-<td class="text-left">Đắk Lắk</td>
-<td class="text-right">82.200</td></tr>
-<tr>
-<td class="text-left">Lâm Đồng</td>
-<td class="text-right">81.500</td></tr>
-<tr>
-<td class="text-left">Gia Lai</td>
-<td class="text-right">82.100</td></tr>
-<tr>
-<td class="text-left">Đắk Nông</td>
-<td class="text-right">82.300</td></tr>
+     {{#each caphe}}
+          <tr>
+          <td class="text-left">{{thi_truong}}</td>
+          <td class="text-right">{{gia}}</td></tr>
+
+          <tr>
+     {{/each}}
+
 </tbody>
 </table>
 </div>
