@@ -2,7 +2,7 @@
 <div style = "padding-left:0px; background-color: #061890; justify-content:center; display:flex; flex-direction:row; height:50px;" >
 <nav class="navbar navbar-expand-lg bg-body-tertiary" style = "background-color: #061890;padding:0px">
   <div class="container-fluid" style = "background-color: #061890;">
-    <a class="navbar-brand" href="/home" style = "color: #fff;
+    <a class="navbar-brand" href="/" style = "color: #fff;
     font-size: 24px;
     margin: 0; padding-right:35px;" >Web<span style = "font-size: 24px;">Giá</span><span style = "color: #ffb935;
     font-weight: 700;font-size: 24px;
@@ -495,7 +495,8 @@
 
       <script>
           document.addEventListener("DOMContentLoaded", function() {
-
+          var check = 0;
+          var checkgia = 0;
           var currentUrl = window.location.href;
           var linkarray  = ["gia-vang" ,"ty-gia" ,"ngoai-te" ,"lai-suat" ,"tien-ao" ,"xang-dau" ,"hang-hoa"]
           for ( var ele of linkarray){
@@ -504,7 +505,10 @@
                   document.getElementById('title-' + ele.split('-').join('')).style.backgroundColor = '#002C94';
                   document.getElementById('title-' + ele.split('-').join('')).style.paddingBottom = '10px';
                   document.getElementById('title-' + ele.split('-').join('')).style.borderBottom = '2px solid #ffb935';
-
+                  check+=1;
+                  if(ele == "gia-vang"){
+                    checkgia+=1;
+                  }
               }
               else{
                   document.getElementById(ele.split('-').join('')).style.display = "none";
@@ -514,13 +518,25 @@
 
               }
           }
+          if(check == 0){
+            
+              document.getElementById('giavang').style.display = "block";
+          
+          }
 
-              document.querySelectorAll("nav > li a").forEach(function(link) {
-                  // Kiểm tra trạng thái :active khi trang được load
-                  if (link.matches(":active")) {
-                      link.classList.add("active");
-                  }
-              });
+          else{
+            if(checkgia == 0)
+            {
+              document.getElementById('giavang').style.display = "none";
+            }
+            else{
+              document.getElementById('giavang').style.display = "block";
+            }
+   
+          }
+
+
+              
 });
       </script>
 

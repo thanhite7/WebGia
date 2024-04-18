@@ -7,7 +7,7 @@ const tygianganhang = require("./ty-gia-ngan-hang");
 const xangdau = require("./xang-dau");
 
 function routes(app){
-    app.use("/home",giavang);
+    app.use("/",giavang);
     app.use("/gia-vang",giavang);
     app.use("/hang-hoa",hanghoa);
     app.use("/lai-suat",laisuat);
