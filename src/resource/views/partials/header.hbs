@@ -501,7 +501,6 @@
       <script>
           document.addEventListener("DOMContentLoaded", function() {
           var check = 0;
-          var checkgia = 0;
           var currentUrl = window.location.href;
           var linkarray  = ["gia-vang" ,"ty-gia" ,"ngoai-te" ,"lai-suat" ,"tien-ao" ,"xang-dau" ,"hang-hoa"]
           for ( var ele of linkarray){
@@ -510,10 +509,7 @@
                   document.getElementById('title-'+ele.split('-').join('')).style.backgroundColor = '#002C94';
                   document.getElementById( 'title-'+ele.split('-').join('')).style.paddingBottom = '10px';
                   document.getElementById( 'title-'+ele.split('-').join('')).style.borderBottom = '2px solid #ffb935';
-                  {{!-- check+=1;
-                  if(currentUrl.includes('gia-vang') ){
-                    checkgia+=1;
-                  } --}}
+                  check+=1;
               }
               else{
                   document.getElementById(ele.split('-').join('')).style.display = "none";
@@ -521,8 +517,13 @@
                   document.getElementById('title-'+ele.split('-').join('')).style.borderBottom = 'none';
 
               }
-          }          
+          }        
+          if(check==0){
+            document.getElementById('giavang').style.display = "block";
+          }  
+          
         });
+
       </script>
 
 
