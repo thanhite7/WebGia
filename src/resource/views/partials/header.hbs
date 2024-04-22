@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="../../public/css/app.css">
-<link rel="stylesheet" href="../../public/css/home.css">
+
 <div style = "padding-left:0px; background-color: #061890; justify-content:center; display:flex; flex-direction:row; height:50px;" >
 <nav class="navbar navbar-expand-lg bg-body-tertiary" style = "background-color: #061890;padding:0px">
   <div class="container-fluid" style = "background-color: #061890;">
@@ -15,7 +15,7 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0" style = "color:white; margin-right: auto; ">
         
         <li class="nav-item dropdown" id = "nav"style = "height:50px; border:none;">
-          <a class="nav-link dropdown-toggle" id = "nav-item" href="https://webgia.onrender.com/gia-vang" style = "color: #fff ;font-size: 16px;
+          <a class="nav-link dropdown-toggle" href="https://webgia.onrender.com/gia-vang" style = "color: #fff ;font-size: 16px;
     margin: 0; padding:13px 12px; " id="title-giavang">
             Giá vàng
           </a>
@@ -53,8 +53,8 @@
           </ul>
         </li>
         <li class="nav-item dropdown" id = "nav"style = "height:50px; border:none;">
-          <a class="nav-link dropdown-toggle" id = "nav-item"href="https://webgia.onrender.com/ty-gia"   style = "color: #fff ;font-size: 16px;
-    margin: 0; padding:13px 12px; "  id="title-tygia">
+          <a class="nav-link dropdown-toggle" href="https://webgia.onrender.com/ty-gia"   style = "color: #fff ;font-size: 16px;
+    margin: 0; padding:13px 12px;"  id="title-tygia">
             Tỷ giá ngân hàng
           </a>
           <ul class="dropdown-menu" style = 'padding:0px;border-radius:0px;  width:auto;'>
@@ -113,7 +113,7 @@
                 </ul>
         </li>
         <li class="nav-item dropdown" id = "nav"style = "height:50px; border:none;">
-          <a class="nav-link dropdown-toggle"id = "nav-item" href="https://webgia.onrender.com/ngoai-te"  style = "color: #fff ;font-size: 16px;
+          <a class="nav-link dropdown-toggle" href="https://webgia.onrender.com/ngoai-te"  style = "color: #fff ;font-size: 16px;
     margin: 0; padding:13px 12px; " id="title-ngoaite">
             Ngoại tệ
           </a>
@@ -176,7 +176,7 @@
 
          
         <li class="nav-item dropdown"id = "nav" style = "height:50px; border:none;">
-          <a class="nav-link dropdown-toggle" id = "nav-item" href="https://webgia.onrender.com/lai-suat"   style = "color: #fff ;font-size: 16px;
+          <a class="nav-link dropdown-toggle"  href="https://webgia.onrender.com/lai-suat"   style = "color: #fff ;font-size: 16px;
     margin: 0; padding:13px 12px; "  id="title-laisuat">
             Lãi suất
           </a>
@@ -230,7 +230,7 @@
           </ul>
         </li>
         <li class="nav-item dropdown" id = "nav" style = "height:50px; border:none;">
-          <a class="nav-link dropdown-toggle" id = "nav-item" href="https://webgia.onrender.com/tien-ao"   style = "color: #fff ;font-size: 16px;
+          <a class="nav-link dropdown-toggle"  href="https://webgia.onrender.com/tien-ao"   style = "color: #fff ;font-size: 16px;
     margin: 0; padding:13px 12px; " id="title-tienao">
             Tiền ảo
           </a>
@@ -268,7 +268,7 @@
 
         </li>
         <li class="nav-item dropdown" id = "nav" style = "height:50px; border:none;">
-          <a class="nav-link dropdown-toggle" id = "nav-item" href="https://webgia.onrender.com/xang-dau"   style = "color: #fff ;font-size: 16px;
+          <a class="nav-link dropdown-toggle"  href="https://webgia.onrender.com/xang-dau"   style = "color: #fff ;font-size: 16px;
     margin: 0; padding:13px 12px; "  id="title-xangdau">
             Xăng dầu
           </a>
@@ -283,7 +283,7 @@
             </li>
             </ul>
         </li><li class="nav-item dropdown" id = "nav"style = "height:50px; border:none;">
-          <a class="nav-link dropdown-toggle" id = "nav-item"href="https://webgia.onrender.com/hang-hoa"   style = "color: #fff ;font-size: 16px;
+          <a class="nav-link dropdown-toggle" href="https://webgia.onrender.com/hang-hoa"   style = "color: #fff ;font-size: 16px;
     margin: 0; padding:13px 12px; "  id="title-hanghoa">
             Hàng hoá
           </a>
@@ -298,7 +298,7 @@
             </ul>
         </li>
         <li class="nav-item " id = "nav">
-          <a class="nav-link "id = "nav-item" href="/blog"   style = "color: #fff ;font-size: 16px; margin: 0;padding:13px 12px; "
+          <a class="nav-link " href="/blog"   style = "color: #fff ;font-size: 16px; margin: 0;padding:13px 12px; "
            id="title-blog" >Blog</a>
            
         </li>
@@ -314,7 +314,7 @@
 
 <br>
 </div>
-<div style = " width:100% ;  box-shadow:0px 5px 5px 0 rgba(152, 148, 148, 0.5);">
+<div style = "width:100% ;  box-shadow:0px 5px 5px 0 rgba(152, 148, 148, 0.5);">
   <div class="sub-nav" itemscope="" itemtype="http://schema.org/SiteNavigationElement" id="giavang">
     <div class="container">
         <ul class="nav">
@@ -507,42 +507,20 @@
           for ( var ele of linkarray){
               if(currentUrl.includes(ele) ){
                   document.getElementById(ele.split('-').join('')).style.display = "block";
-                  document.getElementById('title-' + ele.split('-').join('')).style.backgroundColor = '#002C94';
-                  document.getElementById('title-' + ele.split('-').join('')).style.paddingBottom = '10px';
-                  document.getElementById('title-' + ele.split('-').join('')).style.borderBottom = '2px solid #ffb935';
-                  check+=1;
-                  if(ele == "gia-vang"){
+                  document.getElementById('title'+ele.split('-').join('')).style.backgroundColor = '#002C94';
+                  document.getElementById( 'title'+ele.split('-').join('')).style.paddingBottom = '10px';
+                  document.getElementById( 'title'+ele.split('-').join('')).style.borderBottom = '2px solid #ffb935';
+                  {{!-- check+=1;
+                  if(currentUrl.includes('gia-vang') ){
                     checkgia+=1;
-                  }
+                  } --}}
               }
               else{
                   document.getElementById(ele.split('-').join('')).style.display = "none";
-                  document.getElementById('title-' + ele.split('-').join('')).style.backgroundColor = '#061890';
-                  document.getElementById('title-' + ele.split('-').join('')).style.textDecoration = 'none';
-                  document.getElementById('title-' + ele.split('-').join('')).style.borderBottom = 'none';
 
               }
-          }
-          if(check == 0){
-            
-              document.getElementById('giavang').style.display = "block";
-          
-          }
-
-          else{
-            if(checkgia == 0)
-            {
-              document.getElementById('giavang').style.display = "none";
-            }
-            else{
-              document.getElementById('giavang').style.display = "block";
-            }
-   
-          }
-
-
-              
-});
+          }          
+        });
       </script>
 
 

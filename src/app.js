@@ -25,7 +25,6 @@ routes(app);
 async function updateDataToMongoDB() {
     try {
         await client.connect();
-        console.log('Connected to MongoDB');
         const db = client.db('webgia');
         listfile.forEach(async (file) => {
             const collection = db.collection(file);
@@ -43,12 +42,8 @@ async function updateDataToMongoDB() {
                     if (newDataJson !== currentDataJson) {
 
                         await collection.deleteMany({});
-                        console.log('Old data has been deleted');
                         await collection.insertMany(newData);
-                        console.log('New data has been inserted into MongoDB');
-                    } else {
-                        console.log('No changes detected. Data in MongoDB is up to date.');
-                    }
+                    } 
                 });
         });
     } catch (error) {
