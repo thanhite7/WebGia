@@ -92,9 +92,3 @@ a {
 aside {
   margin-top: 10px;
 }
-
-.nav-link.dropdown-toggle:hover {
-  background-color: #002C94;
-  padding-bottom: 10px;
-  border-bottom: 2px solid #ffb935;
-}
