@@ -507,9 +507,9 @@
           for ( var ele of linkarray){
               if(currentUrl.includes(ele) ){
                   document.getElementById(ele.split('-').join('')).style.display = "block";
-                  document.getElementById('title'+ele.split('-').join('')).style.backgroundColor = '#002C94';
-                  document.getElementById( 'title'+ele.split('-').join('')).style.paddingBottom = '10px';
-                  document.getElementById( 'title'+ele.split('-').join('')).style.borderBottom = '2px solid #ffb935';
+                  document.getElementById('title-'+ele.split('-').join('')).style.backgroundColor = '#002C94';
+                  document.getElementById( 'title-'+ele.split('-').join('')).style.paddingBottom = '10px';
+                  document.getElementById( 'title-'+ele.split('-').join('')).style.borderBottom = '2px solid #ffb935';
                   {{!-- check+=1;
                   if(currentUrl.includes('gia-vang') ){
                     checkgia+=1;
@@ -517,6 +517,8 @@
               }
               else{
                   document.getElementById(ele.split('-').join('')).style.display = "none";
+                  document.getElementById('title-'+ele.split('-').join('')).style.backgroundColor = '#061890';
+                  document.getElementById('title-'+ele.split('-').join('')).style.borderBottom = 'none';
 
               }
           }          
