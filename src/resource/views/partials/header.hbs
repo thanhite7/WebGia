@@ -499,12 +499,12 @@
 
 
       <script>
-          document.getElementById('giavang').style.display = "block";
-          document.addEventListener("DOMContentLoaded", function() {
           
+          document.addEventListener("DOMContentLoaded", function() {
+          var check = 0;
           var currentUrl = window.location.href;
           var linkarray  = ["gia-vang" ,"ty-gia" ,"ngoai-te" ,"lai-suat" ,"tien-ao" ,"xang-dau" ,"hang-hoa"]
-          await for ( var ele of linkarray){
+          for ( var ele of linkarray){
               if(currentUrl.includes(ele) ){
                   document.getElementById(ele.split('-').join('')).style.display = "block";
                   document.getElementById('title-'+ele.split('-').join('')).style.backgroundColor = '#002C94';
@@ -518,8 +518,12 @@
                   document.getElementById('title-'+ele.split('-').join('')).style.borderBottom = 'none';
 
               }
-          }        
-          
+
+          }   
+          if(check==0)     {
+              document.getElementById('giavang').style.display = "block";
+          }
+         
           
         });
 
