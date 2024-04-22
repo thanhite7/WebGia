@@ -8,27 +8,22 @@ body {
   *{
     font-size: 16px;
   }
-  .item-header li a {
+  .item-header > li a {
   
     color: #262626;
       text-decoration: none;
       padding-left:20px;
- 
       cursor: pointer;
       
   }
-  .item-header li:hover, .item-header li:active {
+  
+  .item-header>li:hover, .item-header> li:active {
     color: #262626;
       text-decoration: none;
       background-color: #f5f5f5;
   }
   
-  .nav-item:hover .nav-link {
-    background-color: #002C94;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #ffb935;
-  }
-  .nav-item:focus .nav-link {
+ #nav:hover #nav-item {
     background-color: #002C94;
     padding-bottom: 10px;
     border-bottom: 2px solid #ffb935;
