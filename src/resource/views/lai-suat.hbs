@@ -1,6 +1,5 @@
 
 <link rel="stylesheet" href="css/home.css">
-
 <main id="page">
 <div class="container">
 <div class="row">
@@ -159,22 +158,25 @@
             <tbody class="form-inline">
                 <tr>
                     <td align="left">Số tiền gửi (VND)</td>
-                    <td align="left"><input class="form-control ccls-num" id="ccls_money" type="text" value=""> VND</td>
+                    <td align="left"><input class="form-control ccls-num" id="ccls_money" type="text" value="" > VND</td>
                 </tr>
                 <tr>
                     <td align="left">Kỳ hạn gửi</td>
                     <td align="left">
                         <input class="form-control ccls-num" id="ccls_time" maxlength="3" type="text" value="">
-                        <select class="form-control" id="ccls_time_type" style="width:90px;display:inline-block"><option value="2">Tháng</option><option value="1">Ngày</option></select>
+                        <select class="form-select" id="ccls_time_type" style="width:100px;display:inline-block">
+                            <option value="2">Tháng</option>
+                            <option value="1">Ngày</option>
+                        </select>
                     </td>
                 </tr>
                 <tr>
                     <td align="left">Lãi suất (% năm)</td>
-                    <td align="left"><input class="form-control ccls-num" id="ccls_percent" maxlength="4" type="text" value=""> % năm</td>
+                    <td align="left"><input class="form-control ccls-num" id="ccls_percent" maxlength="4" type="text" value="" > % năm</td>
                 </tr>
                 <tr>
                     <td align="left">&nbsp;</td>
-                    <td align="left"><a href="#" class="btn btn-danger" id="ccls_calc">TÍNH LÃI</a></td>
+                    <td align="left"><a  class="btn btn-danger" id="ccls_calc" onclick="callaisuat()">TÍNH LÃI</a></td>
                 </tr>
             </tbody>
         </table>
@@ -208,6 +210,41 @@
 
 </div></article>
 {{>aside-table}}
+
+<script>
+    function callaisuat(){
+        const tiengui = document.getElementById('ccls_money').value.replace(/\D/g,'');
+        const kyhan = document.getElementById('ccls_time').value;
+        const laisuat = document.getElementById('ccls_percent').value;
+        const thoigian = document.getElementById('ccls_time_type').value;
+        const lai = thoigian=='2' ? (tiengui * parseFloat(kyhan) * parseFloat(laisuat) / 100 / 12).toFixed(3):(tiengui * parseFloat(kyhan) * parseFloat(laisuat) / 100 / 365).toFixed(3) ;
+        
+        const tongtien = (parseFloat(tiengui) + parseFloat(lai)).toFixed(3);
+        document.getElementById('ccls_tlai').innerHTML = addCommas((tongtien)) + ' VND';
+        document.getElementById('ccls_goc').innerHTML = addCommas((tiengui)) + ' VND';
+        document.getElementById('ccls_lai').innerHTML = addCommas((lai)) + ' VND';
+        document.getElementById('ccls_glai').innerHTML = addCommas((tongtien)) + ' VND';
+
+    }
+    var numberInput = ['ccls_money', 'ccls_time', 'ccls_percent']
+    
+    document.addEventListener("DOMContentLoaded", function() {
+        var numberInput = document.getElementById("ccls_money");
+
+            numberInput.addEventListener("input", function() {
+                var value = numberInput.value.replace(/\D/g, ''); // Lọc bỏ tất cả các ký tự không phải là số
+                var formattedValue = addCommas(value);
+                numberInput.value = formattedValue;
+            });
+    });
+
+   
+   
+    function addCommas(number) {
+    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+</script>
 </div>
 </div>
+
 </main>
