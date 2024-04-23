@@ -5,11 +5,12 @@ const getXangDau = async(req, res) => {
     const collection = db.collection('giaxangdau');
     const giaxangdau = await collection.find().toArray();
     giaxangdau.forEach(obj => {
-        if (obj.hasOwnProperty('\ufeffthi_truong')) {
-          obj['thi_truong'] = obj['\ufeffthi_truong'];
-          delete obj['\ufeffthi_truong']; 
+        if (obj.hasOwnProperty('\ufeffsan_pham')) {
+          obj['san_pham'] = obj['\ufeffsan_pham'];
+          delete obj['\ufeffsan_pham']; 
         }
       });
+    // res.json(giaxangdau);
     res.render('xang-dau', {giaxangdau})
 }
 const getdautho = (req, res) => {

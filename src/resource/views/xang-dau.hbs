@@ -12,12 +12,9 @@
     <table class="table table-radius table-hover" style="max-width:400px;margin:0 auto">
     <thead><tr><th>Sản phẩm</th><th class="text-right">Vùng 1</th><th class="text-right">Vùng 2</th></tr></thead>
     <tbody>
-    <tr><th><a href="https://webgia.onrender.com/gia-xang-dau/petrolimex/" title="Giá bán lẻ Xăng RON 95 hôm nay">Xăng RON 95-V</a></th><td class="text-right">24.690</td><td class="text-right">25.180</td></tr>
-    <tr><th><a href="https://webgia.onrender.com/gia-xang-dau/petrolimex/" title="Giá bán lẻ Xăng RON 95 hôm nay">Xăng RON 95-III</a></th><td class="text-right">24.280</td><td class="text-right">24.760</td></tr>
-    <tr><th><a href="https://webgia.onrender.com/gia-xang-dau/petrolimex/" title="Giá bán lẻ Xăng E5 hôm nay">Xăng E5 RON 92-II</a></th><td class="text-right">23.210</td><td class="text-right">23.670</td></tr>
-    <tr><th><a href="https://webgia.onrender.com/gia-xang-dau/petrolimex/" title="Giá bán lẻ Điêzen 0,001S-V hôm nay">DO 0,001S-V</a></th><td class="text-right">21.640</td><td class="text-right">22.070</td></tr>
-    <tr><th><a href="https://webgia.onrender.com/gia-xang-dau/petrolimex/" title="Giá bán lẻ Điêzen DO 0,05S-II hôm nay">DO 0,05S-II</a></th><td class="text-right">21.010</td><td class="text-right">21.430</td></tr>
-    <tr><th><a href="https://webgia.onrender.com/gia-xang-dau/petrolimex/" title="Giá bán lẻ Dầu hỏa 2-K hôm nay">Dầu hỏa 2-K</a></th><td class="text-right">21.260</td><td class="text-right">21.680</td></tr>
+        {{#each giaxangdau}}
+            <tr><th><a href="https://webgia.onrender.com/gia-xang-dau/petrolimex/" title="Giá bán lẻ Xăng RON 95 hôm nay">{{san_pham}}</a></th><td class="text-right">{{vung_1}}</td><td class="text-right">{{vung_2}}</td></tr>
+        {{/each}}
     <tr><td colspan="3" class="donvi"><small>Đơn vị: đồng / lít</small></td></tr>
     </tbody>
     </table><br></div>
