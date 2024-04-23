@@ -21,13 +21,9 @@
 - [About The Project](#about-the-project)
   - [Built With](#built-with)
 - [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
   - [Installation](#installation)
-- [Roadmap](#roadmap)
-- [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
-- [Acknowledgments](#acknowledgments)
 - [Notice](#notice)
 
 ## About The Project
@@ -67,7 +63,7 @@ Please follow the following steps for successful installation:
 3. **Run the Backend:** Navigate to &quot;/src&quot; directory and type the following command in your terminal to run your backend server:
 
    ```sh
-  npm start
+    npm start
    ```
 
 ## License
