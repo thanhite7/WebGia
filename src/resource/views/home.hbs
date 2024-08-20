@@ -1,0 +1,44 @@
+<meta charset="UTF-8">
+
+<link rel="stylesheet" href="../../public/css/app.css">
+
+<main >
+    <div class="container"> 
+        <div class = "row">
+            <div class = "col-md-9" id = "main">
+                <h1 class="h-head">Tổng hợp Giá vàng SJC trên Toàn Quốc mới nhất <small>- Cập nhật lúc 21:10:22 31/03/2024</small></h1>
+                <p>Bảng so sánh giá vàng SJC trên toàn quốc cập nhật lúc 21:15:22 31/03/2024</p>
+                <p>Giá vàng SJC được cập nhật liên tục tại các hệ thống: SJC, DOJI, PNJ, Phú Quý, Bảo Tín Minh Châu.</p>
+                <p>Ở bảng so sánh bên dưới, <strong class="text-green">màu xanh</strong> ở cột <strong>Mua vào</strong> sẽ tương ứng với giá <strong>mua vào cao nhất</strong>; <strong class="text-green">màu xanh</strong> ở cột <strong>Bán ra</strong> sẽ tương ứng với giá <strong>bán ra thấp nhất</strong>.</p>
+                <div class="donvi">Đơn vị: đồng / chỉ</div>
+                <table class="table table-radius table-hover">
+                    <thead>
+                        <tr>
+                            <th>Khu vực</th>
+                            <th>Hệ thống</th>
+                            <th class="text-right">Mua vào</th>
+                            <th class="text-right">Bán ra</th>
+                        </tr>
+                    </thead>
+                        <tbody id="bang-gia">
+                            {{#each giavang}}
+                                
+                                    <tr>
+                                        <th rowspan='1'>{{khu_vuc}}</th>
+                                        <td><a href="#" title="Giá vàng {{he_thong}}"><strong>{{he_thong}}</strong></a></td>
+                                        <td class="text-right text-green">{{mua_vao}}</td>
+                                        <td class="text-right text-green">{{ban_ra}}</td>
+                                    </tr>
+
+                            {{/each}}
+                        </tbody>
+                </table>
+
+    </div>
+    {{>aside-table}}
+    </div>
+    <script>
+
+        
+    </script>
+</main>

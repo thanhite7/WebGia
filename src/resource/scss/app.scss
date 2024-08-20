@@ -1,0 +1,417 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
+  }
+  *{
+    font-size: 16px;
+  }
+  .item-header > li a {
+  
+    color: #262626;
+      text-decoration: none;
+      padding-left:20px;
+      cursor: pointer;
+      
+  }
+  
+  .item-header>li:hover, .item-header> li:active {
+    color: #262626;
+      text-decoration: none;
+      background-color: #f5f5f5;
+  }
+.nav>li>a:focus, .nav>li>a:hover, .sub-nav a.active {
+    background-color: #ffe797;
+}
+ #nav:hover >a {
+    background-color: #002C94;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ffb935;
+  }
+
+  .dropdown-menu {
+    display:none;
+
+  }
+  .dropdown-menu li ul li {
+
+    padding-right:7px;
+    width:auto;
+    min-width:200px;
+    display:inline-block;
+    padding-top:7px;
+    padding-bottom:7px;
+    white-space: nowrap;
+
+  }
+  .nav-item:hover .dropdown-menu{
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+  }
+
+  .dropdown-header{
+
+    font-size: 12px;
+      line-height: 1.42857143;
+      color: #757575;
+      white-space: nowrap; 
+      
+  }
+  
+.bak-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+    margin-top: 5px;
+    background: url("../img/bank40.png") ;
+    background-size: 112px 96px;
+    display:inline-block;
+
+}
+.icon-name{
+  margin-top:3px;
+}
+.bank-icon {
+  display: flex;
+  align-items: center;
+}
+.currency-icon{
+  display: flex;
+  align-items: center;
+}
+.bi-abbank {
+  background-position: -16px -0;
+}
+.bi-acb {
+  background-position: -0 -16px;
+}
+.bi-agribank {
+  background-position: -16px -16px;
+}
+.bi-vietcapitalbank {
+  background-position: -96px -0;
+}
+.bi-bacabank {
+  background-position: -96px -80px;
+}
+.bi-baovietbank {
+  background-position: -32px -0;
+}
+.bi-bidv {
+  background-position: -32px -16px;
+}
+.bi-cbbank {
+  background-position: -0 -32px;
+}
+.bi-eximbank {
+  background-position: -32px -32px;
+}
+.bi-dongabank {
+  background-position: -16px -32px;
+}
+.bi-gpbank {
+  background-position: -48px -0;
+}
+.bi-hdbank {
+  background-position: -48px -16px;
+}
+.bi-hlbank {
+  background-position: -48px -32px;
+}
+.bi-hsbc {
+  background-position: -0 -48px;
+}
+
+.bi-indovinabank {
+  background-position: -16px -48px;
+}
+.bi-kienlongbank {
+  background-position: -32px -48px;
+}
+.bi-lienvietpostbank {
+  background-position: -48px -48px;
+}
+.bi-msb, .bi-maritimebank {
+  background-position: -64px -16px;
+}
+.bi-mbbank {
+  background-position: -64px -0;
+}
+.bi-namabank {
+  background-position: -64px -32px;
+}
+.bi-ncb {
+  background-position: -64px -48px;
+}
+.bi-ocb {
+  background-position: -0 -64px;
+}
+.bi-oceanbank {
+  background-position: -16px -64px;
+}
+.bi-pgbank {
+  background-position: -32px -64px;
+}
+.bi-publicbank {
+  background-position: -48px -64px;
+}
+.bi-pvcombank {
+  background-position: -64px -64px;
+}
+.bi-sacombank {
+  background-position: -80px -0;
+}
+.bi-saigonbank {
+  background-position: -80px -16px;
+}
+.bi-scb {
+  background-position: -80px -32px;
+}
+.bi-seabank {
+  background-position: -80px -48px;
+}
+.bi-shb, .bi-shbbank {
+  background-position: -80px -64px;
+}
+.bi-techcombank {
+  background-position: -0 -80px;
+}
+
+.bi-tpb, .bi-tpbank {
+  background-position: -16px -80px;
+}
+.bi-uob {
+  background-position: -32px -80px;
+}
+.bi-vib {
+  background-position: -48px -80px;
+}
+.bi-vietabank {
+  background-position: -64px -80px;
+}
+.bi-vietbank {
+  background-position: -80px -80px;
+}
+
+
+.bi-vietcombank {
+  background-position: -96px -16px;
+}
+.bi-vietinbank {
+  background-position: -96px -32px;
+}
+.bi-vpbank {
+  background-position: -96px -48px;
+}
+.bi-vrbank {
+  background-position: -96px -64px;
+}
+
+.cur-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 6px;
+  margin-top: 5px;
+  background: url("../img/currencies.png");
+  display: inline-block;
+}
+
+.ci-aud {
+  background-position: 0 0;
+}
+.ci-cad {
+  background-position: -0 -24px;
+}
+.ci-chf {
+  background-position: -0 -48px;
+}
+.ci-cny {
+  background-position: -0 -72px;
+}
+.ci-eur {
+  background-position: -0 -120px;
+}
+.ci-dkk {
+  background-position: -0 -96px;
+}
+.ci-gbp {
+  background-position: -0 -144px;
+}
+.ci-hkd {
+  background-position: -0 -168px;
+}
+.ci-idr {
+  background-position: -0 -624px;
+}
+.ci-inr {
+  background-position: -0 -192px;
+}
+.ci-jpy {
+  background-position: -0 -216px;
+}
+.ci-khr {
+  background-position: -0 -240px;
+}
+.ci-krw {
+  background-position: -0 -264px;
+}
+.ci-kwd {
+  background-position: -0 -288px;
+}
+
+.ci-lak {
+  background-position: -0 -312px;
+}
+.ci-myr {
+  background-position: -0 -336px;
+}
+.ci-nok {
+  background-position: -0 -360px;
+}
+.ci-nzd {
+  background-position: -0 -384px;
+}
+
+.ci-php {
+  background-position: -0 -408px;
+}
+.ci-rub {
+  background-position: -0 -432px;
+}   
+.ci-sar {
+  background-position: -0 -456px;
+}
+.ci-sek {
+  background-position: -0 -480px;
+}
+.ci-sgd {
+  background-position: -0 -504px;
+}
+.ci-thb {
+  background-position: -0 -528px;
+}
+.ci-twd {
+  background-position: -0 -552px;
+}
+.ci-usd {
+  background-position: -0 -576px;
+}
+.ci-zar {
+  background-position: -0 -648px;
+}
+.text-red {
+  color: #fb0000;
+}
+
+
+
+
+
+#footer {
+  font-size: 0.875rem;
+  background-color: #061890;
+  width: 100%;
+  color: #fff;
+  padding-top: 10px;
+  margin-top: 30px;
+  line-height: 2;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  justify-content: center;
+}
+#footer h3 {
+  color: #f6f6f6;
+  border-bottom: 2px solid #fcb813;
+  padding-bottom: 8px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+#footer a {
+  color: #fff;
+  padding: 6px 0;
+  font-size: 1rem;
+  text-decoration: none;
+}
+#footer a:hover, #footer a:active, #footer a:focus {
+  color: #ffb935;
+}
+.copyright {
+  font-size: 1rem;
+  text-align: center;
+  background-color: #00123e;
+  min-height: 40px;
+  color: #fff;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 30px;
+}
+#footer .copyright .copyright-link a {
+  padding: 10px;
+  font-size: 1rem;
+}
+.container{
+  display: flex;
+  margin-left: 10px;
+  margin-right: 0px;
+  padding:0px;
+  width: 100%;
+}
+.sub-nav{
+  box-sizing: border-box;
+  display: none;
+}
+#giavang{
+  display: block;
+}
+.sub-nav .nav a {
+  color: #222;
+  font-size: 0.875rem;
+  padding: 10px 6px;
+  
+}
+.container ul li a{
+  text-decoration: none;
+
+}
+.container ul{
+  display: flex;
+    width: auto;
+    padding-left: auto;;
+}
+.nav>li>a {
+  position: relative;
+  display: block;
+  padding: 10px;
+}
+.container ul li a:hover{
+  background-color:#ffb935;
+  color: #005cef;
+}
+.container ul li a:active{
+  background-color: #ffb935;
+}
+
+
+.containermain {
+  width: 100%;
+}
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+h1.h-head {
+  margin-top: 12px;
+  margin-bottom: 8px;
+}
+h1, h2, h3 {
+  color: #061890;
+}
+h1 {
+  font-size: 1.7rem;
+}
+.col-md-9 {
+  width: 75%;
+}

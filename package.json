@@ -1,0 +1,22 @@
+{
+  "name": "webgia",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "nodemon src/app.js",
+    "watch": "sass -w src/resource/scss:src/public/css --no-source-map"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csv-parser": "^3.0.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-handlebars": "^7.1.2",
+    "mongodb": "^6.5.0",
+    "mongoose": "^8.3.0",
+    "nodemon": "^3.1.0",
+    "sass": "^1.72.0"
+  }
+}
